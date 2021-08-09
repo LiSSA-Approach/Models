@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="sketches" nsURI="edu.kit.kastel.lissa.models.sketches" nsPrefix="edu.kit.kastel.lissa.models">
+  <eClassifiers xsi:type="ecore:EClass" name="Sketch" eSuperTypes="common_meta.ecore#//InformalArtifact"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OnlineSketch" eSuperTypes="#//Sketch">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="recognitions" upperBound="-1"
+        eType="#//RecognitionResult"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OfflineSketch" eSuperTypes="#//Sketch">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="recognition" eType="#//RecognitionResult"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RecognitionResult">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+        eType="#//SketchElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SketchElement"/>
+</ecore:EPackage>

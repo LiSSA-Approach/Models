@@ -1,0 +1,6 @@
+/bin/
+LiSSA-Models.edit/
+LiSSA-Models.editor/
+LiSSA-Models/src/
+.settings
+LiSSA-Models/bin/.gitignore

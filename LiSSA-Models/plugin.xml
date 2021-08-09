@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated models -->
+      <package
+            uri="edu.kit.kastel.lissa.models.base"
+            class="edu.kit.kastel.lissa.models.base.BasePackage"
+            genModel="models/models.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated models -->
+      <package
+            uri="edu.kit.kastel.lissa.models.sketches"
+            class="edu.kit.kastel.lissa.models.sketches.SketchesPackage"
+            genModel="models/models.genmodel"/>
+   </extension>
+
+</plugin>

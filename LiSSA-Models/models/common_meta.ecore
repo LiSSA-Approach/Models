@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="base" nsURI="edu.kit.kastel.lissa.models.base" nsPrefix="edu.kit.kastel.lissa.models">
+  <eClassifiers xsi:type="ecore:EClass" name="ArtifactRepository">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="formalArtifacts" upperBound="-1"
+        eType="#//FormalArtifact"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="informalArtifacts" upperBound="-1"
+        eType="#//InformalArtifact"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Artifact">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="purpose" eType="#//Purpose"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InformalArtifact" eSuperTypes="#//Artifact"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FormalArtifact" eSuperTypes="#//Artifact"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="Purpose">
+    <eLiterals name="Documentation"/>
+    <eLiterals name="Discussion" value="1"/>
+  </eClassifiers>
+</ecore:EPackage>
